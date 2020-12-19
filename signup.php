@@ -38,10 +38,10 @@
             $password=$_POST['pass'];
             $data=$_POST['data'];
             
-            // $servername = "remotemysql.com";
-            // $username = "RAa0VRKfym";
-            // $password = "ssPGRWRQkX";
-            // $dbname = "RAa0VRKfym";
+            $servername = "remotemysql.com";
+            $username = "RAa0VRKfym";
+            $password = "ssPGRWRQkX";
+            $dbname = "RAa0VRKfym";
 
             // $servername = "localhost";
             // $username = "root";
