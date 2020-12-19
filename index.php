@@ -1,11 +1,11 @@
 <?php
-    // $servername = "sql306.byethost7.com";
-    // $username = "b7_24318710";
-    // $password = "pikachu24";
+    $servername = "remotemysql.com";
+    $username = "RAa0VRKfym ";
+    $password = "ssPGRWRQkX";
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
     
     $conn = new mysqli($servername, $username, $password);
     if($conn->connect_error){

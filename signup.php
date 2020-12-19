@@ -38,15 +38,15 @@
             $password=$_POST['pass'];
             $data=$_POST['data'];
             
-            // $servername = "sql306.byethost7.com";
-            // $username = "b7_24318710";
-            // $password = "pikachu24";
+            $servername = "remotemysql.com";
+            $username = "RAa0VRKfym ";
+            $password = "ssPGRWRQkX";
 
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
+            // $servername = "localhost";
+            // $username = "root";
+            // $password = "";
             
-            $dbname = "test";
+            $dbname = "login";
             $conn = new mysqli($servername, $username, $password, $dbname);
             // Check connection
             if ($conn->connect_error) {
