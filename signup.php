@@ -38,15 +38,16 @@
             $password=$_POST['pass'];
             $data=$_POST['data'];
             
-            $servername = "remotemysql.com";
-            $username = "RAa0VRKfym";
-            $password = "ssPGRWRQkX";
+            // $servername = "remotemysql.com";
+            // $username = "RAa0VRKfym";
+            // $password = "ssPGRWRQkX";
+            // $dbname = "RAa0VRKfym";
 
             // $servername = "localhost";
             // $username = "root";
             // $password = "";
+            // $dbname="test";
             
-            $dbname = "login";
             $conn = new mysqli($servername, $username, $password, $dbname);
             // Check connection
             if ($conn->connect_error) {
