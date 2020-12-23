@@ -11,10 +11,12 @@
     <title>sign up page</title>
     <style>
         .yo{
-            padding:10px;
             border-width:3px;
+            border-style:double;
             border-radius:5px;
-            height:25px;
+            padding:20px;
+            /* width:20px; */
+            height:20px;
         }
         form{
             font-size:20px;
@@ -22,21 +24,23 @@
     </style>
   </head>
   <body>
+    <div class="wrap" style="text-align:center">
     <form action="signup.php" method="post"> 
         <label for="email">enter email</label> <br>
         <input type="email" name="email" id="" class="yo"> <br>
         <label for="password">enter password</label> <br>
         <input type="password" name="pass" id="" class="yo"> <br>
-        <label for="data">say something about college</label> <br>
-        <input type="text" name="data" id="" class="yo">
+        <!-- <label for="data">say something about college</label> <br>
+        <input type="text" name="data" id="" class="yo"> <br> -->
         <button type="submit" style="border-radius:5px;background-color:black;color:white;">create account</button>
     </form>
+    </div>
     <?php
         if(count($_POST)!=0){
-            // print_r($_POST);
+            //  print_r($_POST);
             $email = $_POST['email'];
-            $password=$_POST['pass'];
-            $data=$_POST['data'];
+            $password1=$_POST['pass'];
+            // $data=$_POST['data'];
             
             $servername = "remotemysql.com";
             $username = "RAa0VRKfym";
@@ -55,7 +59,7 @@
             }
             else {
                 // echo"<h1>mai hu donn</h1>";
-                $query="insert into login values('$email','$password','$data')";
+                $query="insert into login values('$email','$password1')";
                 if ($conn->query($query) === TRUE) {
                      //echo "account created succesfully";
                     ?>
@@ -83,7 +87,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     -->
   </body>
-  <script src="indexpage.js">
+  <!-- <script src="indexpage.js"> -->
       
   </script>
 </html>
