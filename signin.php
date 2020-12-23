@@ -61,7 +61,7 @@
           while($row = $result->fetch_assoc()) {
               // echo"id = ".$row["email"]." pass = ".$row["password"]."<br>";
               if($inputname==$row["email"] && $inputpassword==$row["password"]){
-                echo"<h1>exists</h1>";
+                // echo"<h1>exists</h1>";
                 // go to next page from here
                 ?>
                 <script>
