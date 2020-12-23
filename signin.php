@@ -63,6 +63,9 @@
               if($inputname==$row["email"] && $inputpassword==$row["password"]){
                 // echo"<h1>exists</h1>";
                 // go to next page from here
+                session_start();
+                $_SESSION["email"]=$inputname;
+                $_SESSION["password"]=$inputpassword;
                 ?>
                 <script>
                   alert("login successful");
