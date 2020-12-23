@@ -16,6 +16,7 @@
         session_start();
         $inputname = $_SESSION["email"];
         $inputpassword = $_SESSION["password"];
+        session_abort();
         print_r($_SESSION);
     ?>
     <!-- Optional JavaScript; choose one of the two! -->
