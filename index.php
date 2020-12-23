@@ -36,8 +36,9 @@
   <body>
     <!-- <h1>Hello, world!</h1> -->
     <h1 style="text-align:center;padding:30px">test login page</h1>
-    <h4 style="text-align:right;">created on 19/12/2020</h4>
-    <h4 style="text-align:right;">database insertion complete</h4>
+    <p style="text-align:right;">website created on 19/12/2020</p>
+    <p style="text-align:right;">database insertion 21/12/2020</p>
+    <p style="text-align:right;">database fetch 23/12/2020</p>
     <p style="text-align:center;padding:30px">
         <button type="button" class="btn btn-primary btn-lg" id="signin">Sign in</button>
     </p>
