@@ -7,16 +7,29 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <style>
+        body{
+            margin:10px;
+        }
+        .wrap{
+            position:fixed;
+            bottom:0px;
+        }    
+    </style>
     <title>Hello, world!</title>
   </head>
   <body>
     <!-- <h1>Hello, world!</h1> -->
-    <p style="text-align:left;">app updates :</p>
-    <p style="text-align:left;">website created on 19/12/2020</p>
-    <p style="text-align:left;">database insertion 21/12/2020</p>
-    <p style="text-align:left;">database fetch 23/12/2020</p>
-    <p style="text-align:left;">top bar added 24/12/2020</p>
+    <h1>Made by :</h1>
+    <h2>Designed by - Sourav Kairi</h2>
+    <h2>Created by - Varun Kedia</h2>
+    <div class="wrap">
+        <p style="text-align:left;">app updates :</p>
+        <p style="text-align:left;">website created on 19/12/2020</p>
+        <p style="text-align:left;">database insertion 21/12/2020</p>
+        <p style="text-align:left;">database fetch 23/12/2020</p>
+        <p style="text-align:left;">top bar added 24/12/2020</p>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
