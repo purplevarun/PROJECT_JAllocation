@@ -15,8 +15,8 @@
     <style>
         body{
           /* margin:10px; */
-          color:white;
-          background-color:black;
+          color:black;
+          background-color:white;
         }
         .yo{
             border-width:3px;
