@@ -14,8 +14,8 @@
     <title>sign in page</title>
     <style>
       body{
-        color:black;
-        background-color:white;
+        color:white;
+        background-color:black;
       }
       .yoyo{
         border-width:3px;

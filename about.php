@@ -25,8 +25,8 @@
             margin:2px;
         }
         body{
-          color:black;
-        background-color:white;
+          color:white;
+        background-color:black;
         }
         h2{
             padding:5px;
