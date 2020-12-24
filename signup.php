@@ -13,6 +13,9 @@
 
     <title>sign up page</title>
     <style>
+        body{
+          /* margin:10px; */
+        }
         .yo{
             border-width:3px;
             border-style:double;
@@ -20,9 +23,12 @@
             padding:20px;
             /* width:20px; */
             height:20px;
+            /* margin:20px; */
         }
         form{
             font-size:20px;
+            /* margin:10px; */
+            
         }
     </style>
   </head>
@@ -32,10 +38,10 @@
         <label for="email">enter email</label> <br>
         <input type="email" name="email" id="" class="yo"> <br>
         <label for="password">enter password</label> <br>
-        <input type="password" name="pass" id="" class="yo"> <br>
+        <input type="password" name="pass" id="" class="yo"> <br> <br>
         <!-- <label for="data">say something about college</label> <br>
         <input type="text" name="data" id="" class="yo"> <br> -->
-        <button type="submit" style="border-radius:5px;background-color:black;color:white;">create account</button>
+        <button type="submit" style="height:40px;border-radius:5px;background-color:black;color:white;">create account</button>
     </form>
     </div>
     <?php
@@ -62,15 +68,14 @@
             }
             else {
                 // echo"<h1>mai hu donn</h1>";
+                if($email=="" || $password1==""){
+                  die('<h1 style="text-align:center;color:red">Fields cannot be blank</h1>');
+                }
                 $query="insert into login values('$email','$password1')";
                 if ($conn->query($query) === TRUE) {
                      //echo "account created succesfully";
-                    ?>
-                    <script>
-                        alert("account created succesfully");
-                        window.location.href="index.php";
-                    </script>
-                    <?php
+                     echo '<h1 style="text-align:center;color:green">Account created successfully</h1>';
+                     echo '<script>window.location.href="index.php";</script>';                  
                 }
                 else {
                     echo"error = $conn->error";

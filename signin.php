@@ -21,11 +21,14 @@
         /* width:20px; */
         height:20px;
       }
+      .fullwrap{
+        margin:10px;
+      }
     </style>
   </head>
   <body>
     <!-- <h1>sign in page</h1> -->
-
+      <div class="fullwrap">
     <!-- Optional JavaScript; choose one of the two! -->
     <div class="wrap" style="text-align:center">
     <form action="signin.php" method="post"> <br>
@@ -69,9 +72,10 @@
                 session_start();
                 $_SESSION["email"]=$inputname;
                 $_SESSION["password"]=$inputpassword;
+                echo '<h1 style="text-align:center;color:green;">Login Successful</h1>';
                 ?>
                 <script>
-                  alert("login successful");
+                  // alert("login successful");
                   window.location.href="frontpage.php";
                 </script>
                 
@@ -79,12 +83,7 @@
                 
               }
           }
-          
-          ?>
-            <script>
-              alert("wrong email and password");
-            </script>
-          <?php
+          die( '<h1 style="text-align:center;color:red;">Email or Password not entered correctly</h1>');
         }
         else {
           die("<h1>Not Registered</h1>");
@@ -101,5 +100,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     -->
+    </div>
   </body>
 </html>

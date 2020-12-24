@@ -38,6 +38,10 @@
             font-size:10px;
             margin:20px;
         }
+        .creds{
+            bottom:0px;
+            text-align:center;
+        }
     </style>
   </head>
   <body>
@@ -50,7 +54,10 @@
     <p style="text-align:center;padding:30px">
         <button type="button" class="btn btn-danger btn-lg" id="signup">Sign up</button>
     </p>
-    
+    <div class="creds">
+    <p>Designed by - Sourav Kairi</p>
+    <p>Developed by - Varun Kedia</p>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

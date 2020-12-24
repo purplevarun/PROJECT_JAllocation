@@ -17,6 +17,10 @@
         font-size:20px;
         /* font-family:sans-serif; */
       }
+      .fullwrap{
+        margin:10px;
+        text-align:center;
+      }
       form{
         text-align:center;
         margin:20px;
@@ -33,6 +37,7 @@
     <title>frontpage</title>
   </head>
   <body>
+      <div class="fullwrap">
     <!-- <h1>Hello, world!</h1> -->
     <?php
         session_start();
@@ -43,6 +48,8 @@
         $inputpassword = $_SESSION["password"];
         // print_r($_SESSION);
     ?>
+    <pre style="font-size:10px;">//dev note - add blinker button @ activity_main.xml</pre>
+    <h1>Enter placement details:</h1>
     <form action="frontpage.php" method="post">
         <label for="loc1">Enter first preference</label> <br>
         <input type="text" name="loc1" id="" class="yo"> <br>
@@ -65,5 +72,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     -->
+    </div>
   </body>
 </html>

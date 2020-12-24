@@ -35,7 +35,7 @@
     <!-- <h1>Hello, world!</h1> -->
     <h2>This is Full Stack Project for Job Allocation of Employees.</h2>
     <h2>Tech used : Java,JavaScript,Mysql,Php.</h2>
-    <h2>This is an original project idea developed by Varun Kedia and Sourav Kairi.</h2>
+    <h2>This is an original project created by Varun Kedia and Sourav Kairi.</h2>
     <h2>Contact : <br>purplevarun@gmail.com <br>kairisrv995@gmail.com  </h2>
     <div class="wrap">
         <p>app updates (date created - 24/12/2020):</p>
