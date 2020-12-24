@@ -24,10 +24,7 @@
             text-align:left;
             margin:2px;
         }
-        body{
-          color:white;
-        background-color:black;
-        }
+        
         h2{
             padding:5px;
             margin:5px;

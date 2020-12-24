@@ -11,15 +11,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <style>
-      body{
-        /* padding:20px; */
-        /* margin:20px; */
-        font-size:20px;
-        color:white;
-        background-color:black;
-        /* font-family:sans-serif; */
-      }
+      
       .fullwrap{
+        font-size:20px;
         margin:10px;
         text-align:center;
       }
