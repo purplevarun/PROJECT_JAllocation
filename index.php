@@ -31,6 +31,10 @@
     <title>Varun Kedia</title>
     <!-- <link rel="stylesheet" href="styled.css"> -->
     <style>
+        body{
+          color:white;
+          background-color:black;
+        }
         p{
             font-size:10px;
             margin:20px;

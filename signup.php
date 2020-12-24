@@ -13,6 +13,10 @@
 
     <title>sign up page</title>
     <style>
+        body{
+          color:white;
+          background-color:black;
+        }
         .yo{
             border-width:3px;
             border-style:double;
