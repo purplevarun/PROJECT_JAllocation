@@ -1,4 +1,7 @@
 <?php
+  include "topbar.php";
+?>
+<?php
     $servername = "remotemysql.com";
     $username = "RAa0VRKfym";
     $password = "ssPGRWRQkX";
@@ -31,6 +34,10 @@
         body{
             background-color:white;
         }
+        p{
+            font-size:10px;
+            margin:20px;
+        }
     </style>
   </head>
   <body>
@@ -46,6 +53,7 @@
     <p style="text-align:right;">website created on 19/12/2020</p>
     <p style="text-align:right;">database insertion 21/12/2020</p>
     <p style="text-align:right;">database fetch 23/12/2020</p>
+    <p style="text-align:right;">top bar added 24/12/2020</p>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -59,6 +67,12 @@
   </body>
   <!-- <script src="indexpage.js"></script> -->
   <script>
+        window.onload = function() {
+            if(!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+            }
+        }
         document.querySelector("#signin").onclick=function() {
             // alert("signin");
             window.location.href="signin.php";
