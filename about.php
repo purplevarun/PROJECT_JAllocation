@@ -1,5 +1,5 @@
 <?php
-  include "topbar";
+  include "topbar.php";
 ?>
 <!doctype html>
 <html lang="en">
