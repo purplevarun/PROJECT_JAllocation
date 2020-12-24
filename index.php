@@ -50,11 +50,7 @@
     <p style="text-align:center;padding:30px">
         <button type="button" class="btn btn-danger btn-lg" id="signup">Sign up</button>
     </p>
-    <p style="text-align:right;">app updates :</p>
-    <p style="text-align:right;">website created on 19/12/2020</p>
-    <p style="text-align:right;">database insertion 21/12/2020</p>
-    <p style="text-align:right;">database fetch 23/12/2020</p>
-    <p style="text-align:right;">top bar added 24/12/2020</p>
+    
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
