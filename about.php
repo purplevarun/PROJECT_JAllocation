@@ -16,11 +16,13 @@
             /* position:fixed; */
             bottom:0px;
             margin: 10px;
+            padding:0px;
+            /* inline:0px; */
         }    
         p{
             font-size:8px;
             text-align:left;
-            margin:10px;
+            margin:2px;
         }
         body{
           color:black;
@@ -42,10 +44,10 @@
     <h2>This is an original project created by Varun Kedia and Sourav Kairi.</h2>
     <h2>Contact : <br>purplevarun@gmail.com <br>kairisrv995@gmail.com  </h2>
     <div class="wrap">
-        <p>app updates (date created - 24/12/2020):</p>
-        <p>ver 1 : initial build</p>
-        <p>ver 2 : topbar added</p>
-        <p>ver 3 : in development</p>
+        <p>app updates (date created - 20/12/2020):</p>
+        <p>21/12/2020 - initial build</p>
+        <p>23/12/2020 - navigation bar</p>
+        <p>25/12/2020 - dark mode</p>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
