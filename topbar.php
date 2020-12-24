@@ -6,3 +6,9 @@
     <button style="margin:4px;float:right;background-color:white;border-style:groove;border-radius:5px;" onclick="document.body.style.color='white';document.body.style.backgroundColor='black';">Dark Mode</button>
     
 </div>
+<script>
+    windows.onload = function(){
+        document.body.style.color="white";
+        document.body.style.backgroundColor="black";
+    }
+</script>
