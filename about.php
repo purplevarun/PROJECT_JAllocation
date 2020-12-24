@@ -12,23 +12,34 @@
             margin:10px;
         }
         .wrap{
-            position:fixed;
+            /* position:fixed; */
             bottom:0px;
+            margin: 10px;
         }    
+        p{
+            font-size:8px;
+            text-align:left;
+        }
+        h2{
+            padding:5px;
+            margin:5px;
+            font-family:monospace;
+            font-size:20px;
+        }
     </style>
     <title>Hello, world!</title>
   </head>
   <body>
     <!-- <h1>Hello, world!</h1> -->
-    <h1>Made by :</h1>
-    <h2>Designed by - Sourav Kairi</h2>
-    <h2>Created by - Varun Kedia</h2>
+    <h2>This is Full Stack Project for Job Allocation of Employees.</h2>
+    <h2>Tech used : Java,JavaScript,Mysql,Php.</h2>
+    <h2>This is an original project idea developed by Varun Kedia and Sourav Kairi.</h2>
+    <h2>Contact : <br>purplevarun@gmail.com <br>kairisrv995@gmail.com  </h2>
     <div class="wrap">
-        <p style="text-align:left;">app updates :</p>
-        <p style="text-align:left;">website created on 19/12/2020</p>
-        <p style="text-align:left;">database insertion 21/12/2020</p>
-        <p style="text-align:left;">database fetch 23/12/2020</p>
-        <p style="text-align:left;">top bar added 24/12/2020</p>
+        <p>app updates (date created - 24/12/2020):</p>
+        <p>ver 1 : initial build</p>
+        <p>ver 2 : topbar added</p>
+        <p>ver 3 : in development</p>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
