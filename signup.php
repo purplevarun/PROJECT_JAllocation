@@ -15,8 +15,8 @@
     <style>
         body{
           /* margin:10px; */
-          color:black;
-          background-color:white;
+          color:white;
+          background-color:black;
         }
         .yo{
             border-width:3px;
@@ -30,13 +30,16 @@
         form{
             font-size:20px;
             /* margin:10px; */
-            
+        }
+        .wrap{
+            margin:20px;
         }
     </style>
   </head>
   <body>
     <div class="wrap" style="text-align:center">
     <form action="signup.php" method="post"> 
+        
         <label for="email">enter email</label> <br>
         <input type="email" name="email" id="" class="yo"> <br>
         <label for="password">enter password</label> <br>
