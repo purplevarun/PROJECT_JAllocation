@@ -42,7 +42,7 @@
   </head>
   <body>
     <!-- <h1>Hello, world!</h1> -->
-    <h1 style="text-align:center;padding:30px">test login page</h1>
+    <h1 style="text-align:center;padding:30px">Job Allocation Project</h1>
     
     <p style="text-align:center;padding:30px">
         <button type="button" class="btn btn-primary btn-lg" id="signin">Sign in</button>
@@ -50,6 +50,7 @@
     <p style="text-align:center;padding:30px">
         <button type="button" class="btn btn-danger btn-lg" id="signup">Sign up</button>
     </p>
+    <p style="text-align:right;">app updates :</p>
     <p style="text-align:right;">website created on 19/12/2020</p>
     <p style="text-align:right;">database insertion 21/12/2020</p>
     <p style="text-align:right;">database fetch 23/12/2020</p>
