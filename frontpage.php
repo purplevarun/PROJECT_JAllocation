@@ -15,6 +15,8 @@
         /* padding:20px; */
         /* margin:20px; */
         font-size:20px;
+        color:black;
+        background-color:white;
         /* font-family:sans-serif; */
       }
       .fullwrap{

@@ -13,6 +13,10 @@
 
     <title>sign in page</title>
     <style>
+      body{
+        color:black;
+        background-color:white;
+      }
       .yoyo{
         border-width:3px;
         border-style:double;

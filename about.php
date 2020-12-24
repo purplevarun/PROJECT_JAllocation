@@ -22,6 +22,10 @@
             text-align:left;
             margin:10px;
         }
+        body{
+          color:black;
+        background-color:white;
+        }
         h2{
             padding:5px;
             margin:5px;

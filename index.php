@@ -32,6 +32,7 @@
     <!-- <link rel="stylesheet" href="styled.css"> -->
     <style>
         body{
+            color:black;
             background-color:white;
         }
         p{
