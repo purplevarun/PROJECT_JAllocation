@@ -26,12 +26,15 @@
       }
       .yo{
           margin:10px;
-          height:30px;
+          width:200px;
+          height:40px;
           border-style:double;
           border-width:4px;
           border-radius:3px;
           border-color:black;
+          padding-top:0px;
       }
+      
     </style>
     <title>frontpage</title>
   </head>
@@ -51,11 +54,24 @@
     <h1>Enter placement details:</h1>
     <form action="frontpage.php" method="post">
         <label for="loc1">Enter first preference</label> <br>
-        <input type="text" name="loc1" id="" class="yo"> <br>
+        <!-- <input type="text" name="loc1" id="" class="yo"> <br> -->
+        <select name="loc1" class="yo" >
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select> <br>
         <label for="loc2">Enter second preference</label> <br>
-        <input type="text" name="loc2" id="" class="yo"> <br>
+        <select name="loc2" class="yo">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select> <br>
         <label for="loc3">Enter third preference</label> <br>
-        <input type="text" name="loc3" id="" class="yo">
+        <select name="loc3" class="yo">
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select> <br>
         <button type="submit" class="btn-lg btn-success">Submit</button>
     </form>
     <?php
