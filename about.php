@@ -47,7 +47,8 @@
         <p>app updates (date created - 20/12/2020):</p>
         <p>21/12/2020 - initial build</p>
         <p>23/12/2020 - navigation bar</p>
-        <p>25/12/2020 - dark mode</p>
+        <p>24/12/2020 - dark mode</p>
+        <p>25/12/2020 - compatibility increased upto android 4</p>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
