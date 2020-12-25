@@ -48,11 +48,38 @@
         }
         $inputname = $_SESSION["email"];
         $inputpassword = $_SESSION["password"];
-        // print_r($_SESSION);
+        print_r($_SESSION);
+        $query = 'select * from login';  
+        $servername = "remotemysql.com";
+        $username = "RAa0VRKfym";
+        $password = "ssPGRWRQkX";
+        $dbname = "RAa0VRKfym";
+        $con = new mysqli($servername,$username,$password,$dbname);
+        if($con->connect_error)
+          die("error = ".$con->connect_error);
+        
+        if($result = $con->query($query)){}
+          else die("<h1>$con->error</h1>");
+        
+        if($result->num_rows>0){
+            echo"<h1>okay</h1>";
+            while($row = $result->fetch_assoc()) {
+              echo"<h1>okay</h1>";
+                if($inputname==$row["email"] && $inputpassword==$row["password"]){
+                  echo"<h1>$row[id]</h1>";
+                  $image = $row["pic"];
+                  echo gettype($row);
+                  print_r($row);
+                }
+            }
+        }
+        
+        
+
     ?>
-    <pre style="font-size:10px;">//dev note - add blinker button @ activity_main.xml</pre>
+    
     <h1>Enter placement details:</h1>
-    <form action="frontpage.php" method="post">
+    <form action="analysis.php" method="post">
         <label for="loc1">Enter first preference</label> <br>
         <!-- <input type="text" name="loc1" id="" class="yo"> <br> -->
         <select name="loc1" class="yo" >
@@ -75,7 +102,7 @@
         <button type="submit" class="btn-lg btn-success">Submit</button>
     </form>
     <?php
-      print_r($_SESSION);
+      // print_r($_SESSION);
     ?>
     <!-- Optional JavaScript; choose one of the two! -->
 

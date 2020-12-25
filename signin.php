@@ -59,14 +59,14 @@
         $con = new mysqli($servername,$username,$password,$dbname);
         if($con->connect_error)
           die("error = ".$con->connect_error);
-        // echo "<h1>yas</h1>";
-        $sql = "select * from login";
+        
+        $sql = "select email,password from login";
         if($result = $con->query($sql)){}
         else die("<h1>$con->error</h1>");
         $inputname = $_POST["email"];
         $inputpassword = $_POST["password"];
-        // echo "$inputpassword"."       --       "."$inputname";
-        $flag=0;
+        
+        
         if($result->num_rows >0){
           while($row = $result->fetch_assoc()) {
               // echo"id = ".$row["email"]." pass = ".$row["password"]."<br>";
