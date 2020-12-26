@@ -65,17 +65,17 @@
           die("error = ".$con->connect_error);
         
         $placement=false;
-        echo"preffered cities are=";print_r($cityarray);
+        // echo"preffered cities are=";print_r($cityarray);
         foreach ($cityarray as $key => $cityvalue) { // the 3 preffered cities
             $query1="select * from vacancy";
             $query1result = $con->query($query1);    
             while($q1=$query1result->fetch_assoc()){
                 
-                echo"<br> city = $q1[city] and value = $cityvalue";
+                // echo"<br> city = $q1[city] and value = $cityvalue";
                 if($q1["city"]==$cityvalue && $q1["seats"]>0){
                         
                         
-                        echo"<br>$q1[city]";
+                        // echo"<br>$q1[city]";
                         $new_no_of_seats = $q1["seats"]-1;
                         $updatequery = "update vacancy set seats=$new_no_of_seats where city='$cityvalue'";
                         if($con->query($updatequery)){}
@@ -84,7 +84,7 @@
                         $placement=true;
                         $insertjobquery = "insert into joblist values('$id','$name','$cityvalue')";
                         if($con->query($insertjobquery)){
-                            echo"<br>congrats u got placed in $cityvalue";
+                            echo"<br><h1 style=text-align:center;color:green>congrats u got placed in $cityvalue</h1>";
                             echo"<br>seats before = $q1[seats]";
                             echo"<br>seats now = $new_no_of_seats";  
                         }
