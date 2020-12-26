@@ -49,6 +49,8 @@
         <p>23/12/2020 - navigation bar</p>
         <p>24/12/2020 - dark mode</p>
         <p>25/12/2020 - compatibility increased upto android 4</p>
+        <p>26/12/2020 - 2 new databases added for algorithm</p>
+        <p>26/12/2020 - main algorithm build started</p>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
