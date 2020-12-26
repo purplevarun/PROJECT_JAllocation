@@ -50,20 +50,21 @@
         <input type="email" name="email" id="" class="yo"> <br>
         <label for="password">enter password</label> <br>
         <input type="password" name="pass" id="" class="yo"> <br>
-        <label for="id">enter job ID</label> <br>
-        <input type="text" name="id" id=""class="yo"> <br> <br>
-        <label for="pic">Upload Passport photo(size<=1MB)</label> <br>
-        <div style=""><input type="file" name="pic" id="" accept="image/*" class="yoyo"></div> <br>
+        <label for="name">enter name</label> <br>
+        <input type="text" name="name" id="" class="yo"> <br> <br>
+        <!-- <label for="id">enter job ID</label> <br>
+        <input type="text" name="id" id=""class="yo"> <br> <br> -->
         <button type="submit" style="height:40px;border-radius:5px;background-color:black;color:white;">create account</button>
     </form>
     </div>
     <?php
         if(count($_POST)!=0){
-              print_r($_POST);
+              // print_r($_POST);
             $email = $_POST['email'];
             $password1=$_POST['pass'];
-            $jobid = $_POST['id'];
-            $pic = $_POST['pic'];
+            // $jobid = $_POST['id'];
+            $jobid=rand(10000,100000);
+            $name = $_POST['name'];
             // $data=$_POST['data'];
             
             $servername = "remotemysql.com";
@@ -86,7 +87,7 @@
                 if($email=="" || $password1==""){
                   die('<h1 style="text-align:center;color:red">Fields cannot be blank</h1>');
                 }
-                $query="insert into login values('$email','$password1','$jobid','$pic')";
+                $query="insert into login values('$email','$password1','$name','$jobid')";
                 if ($conn->query($query) === TRUE) {
                      //echo "account created succesfully";
                      echo '<h1 style="text-align:center;color:green">Account created successfully</h1>';

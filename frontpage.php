@@ -34,7 +34,11 @@
           border-color:black;
           padding-top:0px;
       }
-      
+      .details{
+          text-align:left;
+          /* background-color:red; */
+          color:magenta;
+      }
     </style>
     <title>frontpage</title>
   </head>
@@ -48,7 +52,7 @@
         }
         $inputname = $_SESSION["email"];
         $inputpassword = $_SESSION["password"];
-        print_r($_SESSION);
+        // print_r($_SESSION);
         $query = 'select * from login';  
         $servername = "remotemysql.com";
         $username = "RAa0VRKfym";
@@ -62,14 +66,15 @@
           else die("<h1>$con->error</h1>");
         
         if($result->num_rows>0){
-            echo"<h1>okay</h1>";
+            // echo"<h1>okay</h1>";
             while($row = $result->fetch_assoc()) {
-              echo"<h1>okay</h1>";
+              // echo"<h1>okay</h1>";
                 if($inputname==$row["email"] && $inputpassword==$row["password"]){
-                  echo"<h1>$row[id]</h1>";
-                  $image = $row["pic"];
-                  echo gettype($row);
-                  print_r($row);
+                  // echo"<h1>$row[id]</h1>";
+                  // echo"<h1>$row[name]</h1>";
+                  $displayid = $row['id'];
+                  $displayname = $row['name'];
+                  
                 }
             }
         }
@@ -77,27 +82,30 @@
         
 
     ?>
-    
+    <div class="details">
+        <p>Name : <?php echo"$displayname";?></p>
+        <p>ID : <?php echo"$displayid";?></p>
+    </div>
     <h1>Enter placement details:</h1>
     <form action="analysis.php" method="post">
         <label for="loc1">Enter first preference</label> <br>
         <!-- <input type="text" name="loc1" id="" class="yo"> <br> -->
         <select name="loc1" class="yo" >
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
         </select> <br>
         <label for="loc2">Enter second preference</label> <br>
         <select name="loc2" class="yo">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
         </select> <br>
         <label for="loc3">Enter third preference</label> <br>
         <select name="loc3" class="yo">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Bangalore">Bangalore</option>
         </select> <br>
         <button type="submit" class="btn-lg btn-success">Submit</button>
     </form>
