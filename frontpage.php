@@ -78,6 +78,8 @@
                 }
             }
         }
+        $_SESSION["id"]=$displayid;
+        $_SESSION["name"] = $displayname;
     ?>
     <?php
         $cityquery = "select city from vacancy";

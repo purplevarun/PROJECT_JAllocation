@@ -15,12 +15,36 @@
             color:white;
             background-color:black;
         }
+      .details{
+          text-align:left;
+          /* background-color:red; */
+          color:magenta;
+      }
     </style>
     <title>Hello, world!</title>
   </head>
   <body>
     <?php
-        echo"dev note :";print_r($_POST); // 
+              $servername = "remotemysql.com";
+              $username = "RAa0VRKfym";
+              $password = "ssPGRWRQkX";
+              $dbname = "RAa0VRKfym";
+              $con = new mysqli($servername,$username,$password,$dbname);
+
+        // echo"dev note :";print_r($_POST); // 
+        session_start();
+        // print_r($_SESSION);
+        $name = $_SESSION["name"];
+        $id = $_SESSION["id"];
+        $alreadyquery = "select * from joblist";
+        $alreadyresult=$con->query($alreadyquery);
+        while($alreadyrow=$alreadyresult->fetch_assoc()){
+              if($id==$alreadyrow["id"]){
+                echo"<h1 style=color:red;text-align:center>You are already placed in $alreadyrow[city]</h1>";
+                // print_r($alreadyrow);
+                die();
+              }
+        }
         $city1=$_POST["loc1"];
         $city2=$_POST["loc2"];
         $city3=$_POST["loc3"];
@@ -33,10 +57,69 @@
           echo'<script>history.go(-1)</script>';    
           die("<h1 style=text-align:center;color:red;>please select different city names</h1>");
         }      
-        echo"<br>dev note : okay up to here";
+        $cityarray=array($city1,$city2,$city3);
+        // echo"city array=";print_r($cityarray);
+        // echo"<br>dev note : okay up to here";
+        
+        if($con->connect_error)
+          die("error = ".$con->connect_error);
+        $query1="select * from vacancy";
+        $query1result = $con->query($query1);
+        $placement=false;
+        while($q1=$query1result->fetch_assoc()){
+            // print_r($q1);
+            foreach ($cityarray as $key => $value) {
+                if($q1["city"]==$value){
+                    // echo"seats in $value are  = $q1[seats]";
+                    if($q1["seats"]>0){
+                        echo"<br>$q1[city]";
+                        $new_no_of_seats = $q1["seats"]-1;
+                        $updatequery = "update vacancy set seats=$new_no_of_seats where city='$value'";
+                        if($con->query($updatequery)){}
+                        else die("problem in update".$con->error);
+                        
+                        $placement=true;
+                        $insertjobquery = "insert into joblist values('$id','$name','$value')";
+                        if($con->query($insertjobquery)){
+                          echo"<br>congrats u got placed in $value";
+                          echo"<br>seats before = $q1[seats]";
+                          echo"<br>seats now = $new_no_of_seats";  
+                        }
+                        else die("here is error".$con->error);
+                        break 2;
+                    }
+                }  
+            }    
+        }
+        if($placement==false){
+            echo"<h1 style=color:red;text-align:center>sorry no vacancy left at any location</h1>";
+        }
 
+        
     ?>
-
+    <div class="details">
+        <p>Name : <?php echo"$name";?></p>
+        <p>ID : <?php echo"$id";?></p>
+    </div>
+    <?php
+        
+        $displayquery="select * from joblist";
+        $displayqueryresult=$con->query($displayquery);
+        echo"<div style=background-color:black;>";
+        echo"<h1 style=text-align:center>List of Employees already placed</h1>";
+        echo"<table class=table style=color:white>";
+        echo"<tr><th>ID</th><th>Name</th><th>City</th></tr>";
+        while($displayrow=$displayqueryresult->fetch_assoc()){
+              echo"<tr><td>$displayrow[id]</td>";
+              echo"<td>$displayrow[name]</td>";
+              echo"<td>$displayrow[city]</td></tr>";
+        }
+        echo"</table>";
+        echo"</div>";
+        
+        
+        
+    ?>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
