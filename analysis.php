@@ -72,6 +72,7 @@
             while($q1=$query1result->fetch_assoc()){
                 
                 // echo"<br> city = $q1[city] and value = $cityvalue";
+                
                 if($q1["city"]==$cityvalue && $q1["seats"]>0){
                         
                         
@@ -84,27 +85,27 @@
                         $placement=true;
                         $insertjobquery = "insert into joblist values('$id','$name','$cityvalue')";
                         if($con->query($insertjobquery)){
-                            echo"<br><h1 style=text-align:center;color:green>congrats u got placed in $cityvalue</h1>";
-                            echo"<br>seats before = $q1[seats]";
-                            echo"<br>seats now = $new_no_of_seats";  
+                            echo"<br><h1 style=text-align:center;color:green>Congratulations you got placed in $cityvalue</h1>";
+                            // echo"<br>seats before = $q1[seats]";
+                            // echo"<br>seats now = $new_no_of_seats";  
                         }
                         else {die("here is error".$con->error);}
                         break 2;
                     
                 }  
             }    
-        }
-
-        // foreach ($cityarray as $key => $value) {
-              
-        // }
+        } 
+        
 
 
         if($placement==false){
-            echo"<h1 style=color:red;text-align:center>sorry no vacancy left at any location</h1>";
+            echo"<h1 style=color:red;text-align:center>Sorry no vacancy left at any location</h1>";
         }
 
-        
+        // echo"<h5 style=text-align:center;color:blue>Your preffered locations :</h5>";
+        // foreach ($cityarray as $key => $value) {
+        //       echo"<h6 style=text-align:center;color:blue>$value</h6>";
+        // }
     ?>
     <div class="details">
         <p>Name : <?php echo"$name";?></p>

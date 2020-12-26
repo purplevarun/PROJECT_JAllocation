@@ -47,7 +47,7 @@
   </head>
   <body>
     <!-- <h1>Hello, world!</h1> -->
-    <h1 style="text-align:center;padding:30px">Job Allocation Project</h1>
+    <h1 style="text-align:center;padding:30px">Job Location Allocation System</h1>
     
     <p style="text-align:center;padding:30px">
         <button type="button" class="btn btn-primary btn-lg" id="signin">Sign in</button>
