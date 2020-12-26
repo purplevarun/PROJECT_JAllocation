@@ -66,9 +66,9 @@
         $query1="select * from vacancy";
         $query1result = $con->query($query1);
         $placement=false;
-        while($q1=$query1result->fetch_assoc()){
+        foreach ($cityarray as $key => $value) {
             // print_r($q1);
-            foreach ($cityarray as $key => $value) {
+            while($q1=$query1result->fetch_assoc()){
                 if($q1["city"]==$value){
                     // echo"seats in $value are  = $q1[seats]";
                     if($q1["seats"]>0){
