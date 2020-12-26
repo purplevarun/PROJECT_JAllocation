@@ -40,7 +40,7 @@
   <body>
     <!-- <h1>Hello, world!</h1> -->
     <h2>This is Full Stack Project for Job Allocation of Employees.</h2>
-    <h2>Tech used : Java,JavaScript,Mysql,Php.</h2>
+    <h2>Tech used : Java(Android Studio),JavaScript,Mysql,Php.</h2>
     <h2>This is an original project created by Varun Kedia and Sourav Kairi.</h2>
     <h2>Contact : <br>purplevarun@gmail.com <br>kairisrv995@gmail.com  </h2>
     <div class="wrap">
@@ -49,7 +49,7 @@
         <p>23/12/2020 - navigation bar</p>
         <p>24/12/2020 - dark mode</p>
         <p>25/12/2020 - compatibility increased upto android 4</p>
-        <p>26/12/2020 - 2 new databases added for algorithm</p>
+        <p>26/12/2020 - 2 new databases added - vacancy and joblist</p>
         <p>26/12/2020 - main algorithm build started</p>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->

@@ -20,7 +20,7 @@
   </head>
   <body>
     <?php
-        print_r($_POST); // 
+        echo"dev note :";print_r($_POST); // 
         $city1=$_POST["loc1"];
         $city2=$_POST["loc2"];
         $city3=$_POST["loc3"];
@@ -33,7 +33,7 @@
           echo'<script>history.go(-1)</script>';    
           die("<h1 style=text-align:center;color:red;>please select different city names</h1>");
         }      
-        // echo"okay";
+        echo"dev note : okay up to here";
 
     ?>
 

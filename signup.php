@@ -84,7 +84,7 @@
             }
             else {
                 // echo"<h1>mai hu donn</h1>";
-                if($email=="" || $password1==""){
+                if($email=="" || $password1=="" || $name==""){
                   die('<h1 style="text-align:center;color:red">Fields cannot be blank</h1>');
                 }
                 $query="insert into login values('$email','$password1','$name','$jobid')";
