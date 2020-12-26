@@ -39,10 +39,10 @@
   </head>
   <body>
     <!-- <h1>Hello, world!</h1> -->
-    <h2>This is Full Stack Project for Job Allocation of Employees.</h2>
+    <h2>This is Full Stack Project for Job Location Allocation of Employees.</h2>
     <h2>Tech used : Java(Android Studio),JavaScript,Mysql,Php.</h2>
     <h2>This is an original project created by Varun Kedia and Sourav Kairi.</h2>
-    <h2>Contact : <br>purplevarun@gmail.com <br>kairisrv995@gmail.com  </h2>
+    <h2>Contact us : <br>purplevarun@gmail.com <br>kairisrv995@gmail.com  </h2>
     <div class="wrap">
         <p>app updates (date created - 20/12/2020):</p>
         <p>21/12/2020 - initial build</p>

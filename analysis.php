@@ -63,34 +63,43 @@
         
         if($con->connect_error)
           die("error = ".$con->connect_error);
-        $query1="select * from vacancy";
-        $query1result = $con->query($query1);
+        
         $placement=false;
-        foreach ($cityarray as $key => $value) {
-            // print_r($q1);
+        echo"preffered cities are=";print_r($cityarray);
+        foreach ($cityarray as $key => $cityvalue) { // the 3 preffered cities
+            $query1="select * from vacancy";
+            $query1result = $con->query($query1);    
             while($q1=$query1result->fetch_assoc()){
-                if($q1["city"]==$value){
-                    // echo"seats in $value are  = $q1[seats]";
-                    if($q1["seats"]>0){
+                
+                echo"<br> city = $q1[city] and value = $cityvalue";
+                if($q1["city"]==$cityvalue && $q1["seats"]>0){
+                        
+                        
                         echo"<br>$q1[city]";
                         $new_no_of_seats = $q1["seats"]-1;
-                        $updatequery = "update vacancy set seats=$new_no_of_seats where city='$value'";
+                        $updatequery = "update vacancy set seats=$new_no_of_seats where city='$cityvalue'";
                         if($con->query($updatequery)){}
                         else die("problem in update".$con->error);
                         
                         $placement=true;
-                        $insertjobquery = "insert into joblist values('$id','$name','$value')";
+                        $insertjobquery = "insert into joblist values('$id','$name','$cityvalue')";
                         if($con->query($insertjobquery)){
-                          echo"<br>congrats u got placed in $value";
-                          echo"<br>seats before = $q1[seats]";
-                          echo"<br>seats now = $new_no_of_seats";  
+                            echo"<br>congrats u got placed in $cityvalue";
+                            echo"<br>seats before = $q1[seats]";
+                            echo"<br>seats now = $new_no_of_seats";  
                         }
-                        else die("here is error".$con->error);
+                        else {die("here is error".$con->error);}
                         break 2;
-                    }
+                    
                 }  
             }    
         }
+
+        // foreach ($cityarray as $key => $value) {
+              
+        // }
+
+
         if($placement==false){
             echo"<h1 style=color:red;text-align:center>sorry no vacancy left at any location</h1>";
         }
@@ -105,7 +114,7 @@
         
         $displayquery="select * from joblist";
         $displayqueryresult=$con->query($displayquery);
-        echo"<div style=background-color:black;>";
+        // echo"<div style=background-color:black;>";
         echo"<h1 style=text-align:center>List of Employees already placed</h1>";
         echo"<table class=table style=color:white>";
         echo"<tr><th>ID</th><th>Name</th><th>City</th></tr>";
@@ -115,7 +124,8 @@
               echo"<td>$displayrow[city]</td></tr>";
         }
         echo"</table>";
-        echo"</div>";
+        // echo"</div>";
+        
         
         
         
