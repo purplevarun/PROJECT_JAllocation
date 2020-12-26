@@ -33,7 +33,7 @@
           echo'<script>history.go(-1)</script>';    
           die("<h1 style=text-align:center;color:red;>please select different city names</h1>");
         }      
-        echo"dev note : okay up to here";
+        echo"<br>dev note : okay up to here";
 
     ?>
 
