@@ -78,8 +78,16 @@
                 }
             }
         }
-        
-        
+    ?>
+    <?php
+        $cityquery = "select city from vacancy";
+        $cityresult = $con->query($cityquery);
+        $citynames = array();
+        while($citys = $cityresult->fetch_assoc()){
+            // echo"cities are :".$citys["city"];
+            array_push($citynames,$citys["city"]);
+        }
+        // print_r($citynames);
 
     ?>
     <div class="details">
@@ -91,21 +99,27 @@
         <label for="loc1">Enter first preference</label> <br>
         <!-- <input type="text" name="loc1" id="" class="yo"> <br> -->
         <select name="loc1" class="yo" >
-            <option value="Bangalore">Bangalore</option>
-            <option value="Delhi">Delhi</option>
-            <option value="Kolkata">Kolkata</option>
+            <option style="display:none"></option>
+            <?php
+                foreach( $citynames as $id=>$name) 
+                echo "<option value=\"$name\">$name</option>";
+            ?>
         </select> <br>
         <label for="loc2">Enter second preference</label> <br>
         <select name="loc2" class="yo">
-            <option value="Kolkata">Kolkata</option>
-            <option value="Bangalore">Bangalore</option>
-            <option value="Delhi">Delhi</option>
+            <option style="display:none"></option>
+            <?php
+                foreach( $citynames as $id=>$name) 
+                echo "<option value=\"$name\">$name</option>";
+            ?>
         </select> <br>
         <label for="loc3">Enter third preference</label> <br>
         <select name="loc3" class="yo">
-            <option value="Delhi">Delhi</option>
-            <option value="Kolkata">Kolkata</option>
-            <option value="Bangalore">Bangalore</option>
+            <option style="display:none"></option>
+            <?php
+                foreach( $citynames as $id=>$name) 
+                echo "<option value=\"$name\">$name</option>";
+            ?>
         </select> <br>
         <button type="submit" class="btn-lg btn-success">Submit</button>
     </form>
