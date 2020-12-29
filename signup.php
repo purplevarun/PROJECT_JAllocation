@@ -46,11 +46,11 @@
     <div class="wrap" style="text-align:center">
     <form action="signup.php" method="post"> 
         
-        <label for="email">enter email</label> <br>
+        <label for="email">Enter email</label> <br>
         <input type="email" name="email" id="" class="yo"> <br>
-        <label for="password">enter password</label> <br>
+        <label for="password">Enter password</label> <br>
         <input type="password" name="pass" id="" class="yo"> <br>
-        <label for="name">enter name</label> <br>
+        <label for="name">Enter name</label> <br>
         <input type="text" name="name" id="" class="yo"> <br> <br>
         <!-- <label for="id">enter job ID</label> <br>
         <input type="text" name="id" id=""class="yo"> <br> <br> -->

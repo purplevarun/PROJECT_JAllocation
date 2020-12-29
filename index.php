@@ -49,12 +49,19 @@
     <!-- <h1>Hello, world!</h1> -->
     <h1 style="text-align:center;padding:30px">Job Location Allocation System</h1>
     
-    <p style="text-align:center;padding:30px">
+    <p style="text-align:center;padding:20px">
         <button type="button" class="btn btn-primary btn-lg" id="signin">Sign in</button>
     </p>
-    <p style="text-align:center;padding:30px">
+    <p style="text-align:center;padding:20px">
         <button type="button" class="btn btn-danger btn-lg" id="signup">Sign up</button>
     </p>
+    <p style="text-align:center;padding:20px">
+        <button type="button" class="btn btn-success btn-lg" id="admin" style="color:white">Admin</button>
+    </p>
+    <p style="text-align:center;padding:20px">
+        <button type="button" class="btn btn-info btn-lg" style="color:white;" id="records">Check Records</button>
+    </p>
+    
     <div class="creds">
     <p>Designed by - Sourav Kairi</p>
     <p>Developed by - Varun Kedia</p>
@@ -85,6 +92,14 @@
         document.querySelector("#signup").onclick=function() {
             // alert("signup");
             window.location.href="signup.php";
+        }
+        document.querySelector("#records").onclick=function() {
+            // alert("records");
+            window.location.href="records.php";
+        }
+        document.querySelector("#admin").onclick=function() {
+            // alert("admin");
+            window.location.href="admin.php";
         }
   </script>
 </html>

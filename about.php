@@ -51,6 +51,8 @@
         <p>25/12/2020 - compatibility increased upto android 4</p>
         <p>26/12/2020 - 2 new databases added - vacancy and joblist</p>
         <p>26/12/2020 - main algorithm build started</p>
+        <p>27/12/2020 - update and fetch algorithms complete</p>
+        <p>29/12/2020 - (ver 2) ADMIN functionality added</p>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 

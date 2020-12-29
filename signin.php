@@ -36,9 +36,9 @@
     <!-- Optional JavaScript; choose one of the two! -->
     <div class="wrap" style="text-align:center">
     <form action="signin.php" method="post"> <br>
-      <label for="email">enter email</label> <br>
+      <label for="email">Enter email</label> <br>
       <input type="email" name="email" value="" class="yoyo"> <br>
-      <label for="password">enter password</label> <br>
+      <label for="password">Enter password</label> <br>
       <input type="password" name="password" id="" class="yoyo"> <br>
       <button type="submit" style="background-color:green;margin:10px;font-size:20px;border-radius:5px;border-style:double-line;">log in</button>
     </form>
