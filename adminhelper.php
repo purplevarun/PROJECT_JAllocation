@@ -12,12 +12,26 @@
                 color:white;
                 background-color: black;
             }
+        a{
+          text-decoration: none;
+          color:goldenrod;
+        }
+        a:hover{
+          text-decoration: none;
+          color:red;
+        }
+        
     </style>
     <title>admin helper module</title>
   </head>
   <body>
-        <h1>welcome to admin page</h1>
-        <h2>// still in developement</h2>
+        <!-- <h1>welcome to admin page</h1>
+        <h2>// still in developement</h2> -->
+        <h1 style="color:green;text-align:center">Welcome Admin</h1>
+        <h2 style="text-align:left">What do you want to do?</h2>
+        <a href="changevacancy.php"><h4>1. Change number of vacancies in all cities</h4></a>
+        <a href="addcity.php"><h4>2. Add new city in database</h4></a>
+        <a href="deleteuser.php"><h4>3. Remove Employee</h4></a>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
